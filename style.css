@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
+:root{
+    --white: rgb(250, 250, 250);
+    --green: rgb(65, 127, 76);
+    --turquise: rgb(105, 173, 160);
+    --light-black: rgb(9, 9, 12);
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--light-black);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--green);
+    border-radius: 5px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    background: var(--light-black);
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: var(--light-black);
+    top: 0;
+    left: 0;
+    padding: 1.2rem 5% 1.2rem 5%;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--green);
+}
+
+nav i{
+    font-size: 1.4rem;
+}
+
+nav a{
+    color: var(--green);
+    text-decoration: none;
+}
+
+nav ul, nav ul li{ 
+    display: flex;
+    margin-inline: 1rem;
+    color: var(--green);
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    border-bottom: 1px solid var(--turquise);
+    transition: .5s ease-in-out;
+}
+
+.container{
+    width: min(100%, 1920px);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hello{
+    width: min(100%, 1920px);
+    min-height: 95vh;
+    margin-top: 3%;
+    color: var(--white);
+    font-size: 4rem;
+    background-image: url(mainbg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(50, 50, 50, .4);
+    background-blend-mode: multiply;
+    padding: 8rem;
+}
+
+
+#hello span{
+    color: var(--turquise);
+    font-size: 4.5rem;
+}
+
+#neo, #morpheus{
+    width: min(80%, 1600px);
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+}
+
+#neo img, #morpheus img{
+    width: 30rem;
+    height: 40rem;
+}
+
+#morpheus img{
+    padding-top: 2rem;
+}
+
+.info{
+    width: min(60%, 1200px);
+    text-align: center;
+    padding: 2rem;
+}
+
+.info p{
+    margin: 1rem;
+    line-height: 1.4rem;
+}
+
+.info h2{
+    color: var(--turquise);
+}
+
+#animation{
+    width: min(100%, 1920px);
+    color: var(--green);
+    padding: 2rem;
+    height: 50rem;
+    font-family: 'Alegreya', serif;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+
+.animation-paragraph{
+   writing-mode: vertical-rl;
+   text-orientation: upright;
+   letter-spacing: -2px;
+   position: absolute;
+}
+
+#contact{
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem 0 2rem 0;
+    padding: 3rem;
+    width: min(80%, 1200px);
+    color: #fff;
+    border: 1px solid #fff;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(90deg, rgba(65,127,76,1) 6%, rgba(105,173,160,1) 65%);
+}
+
+#contact span{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#contact span p{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+#contact i{
+    color: var(--turquise);
+}
+
+@media screen and (max-width: 500px) {
+    nav{
+        font-size: .8rem;
+        justify-content: start;
+    }
+
+    nav i{
+        font-size: 1rem;
+    }
+
+    #hello{
+    font-size: 2.5rem;
+    padding: 4rem;
+    padding-top: 100%;
+}
+
+#hello span{
+    font-size: 3rem;
+}
+
+#neo, #morpheus{
+    flex-wrap: wrap;
+}
+
+#neo img, #morpheus img{
+    width: 20rem;
+    height: 25rem;
+}
+
+.info{
+    padding: .5rem;
+    width: 90%;
+}
+
+.info p{
+    font-size: .7rem;
+    margin: 1rem;
+    line-height: 1rem;
+}
+
+#contact{
+    margin: 3rem 0 2rem 0;
+    padding: 1.5rem;
+    width: min(80%, 1200px);
+    flex-wrap: wrap;
+}
+
+#contact span{
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 1rem;
+}
+
+#contact span p{
+    margin-top: 1rem;
+    font-size: .9rem;
+}
+
+}
